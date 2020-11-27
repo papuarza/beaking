@@ -420,7 +420,7 @@ footer.gracias {
   padding-top: 20px;
 }
 
-.carousel-inner.mobile {
+.carousel.slide.mobile {
   display: none;
 }
 
@@ -432,6 +432,7 @@ footer.gracias {
   .top-landing {
     flex-wrap: wrap;
     background-color: rgba(0,0,0,.5);
+    background-image: url('./images/bg_2.png');
   }
   .left-top {
     width: 100%;
@@ -485,11 +486,11 @@ footer.gracias {
   .bottom-landing {
     padding: 50px 20px;;
   }
-  .carousel-inner.desktop {
+  .carousel.slide.desktop {
     display: none;
   }
-  .carousel-inner.mobile {
-    display: initial;
+  .carousel.slide.mobile {
+    display: flex;
   }
   .bottom-landing .carousel-item .product-item {
     width: 100%;
