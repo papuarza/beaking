@@ -26,13 +26,11 @@ function getCookie(c_name) {
 }
 
 let page = window.location.pathname;
-console.log(page)
-
-// if(getCookie('edad') && page != '/age') {
-//   window.location.href = "index.html";
-// } else {
-//   window.location.href = "age.html";
-// }
+if(getCookie('edad')) {
+  window.location.href = "index.html";
+} else {
+  window.location.href = "age.html";
+}
 
   let today = new Date();
   let eighteenYearsBack = new Date(today.getMonth() + "/" + today.getDate() + "/" + (today.getFullYear() - 18));
