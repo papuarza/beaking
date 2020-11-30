@@ -8,6 +8,18 @@
   src: url(./fonts/FuturaLight.ttf);
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 
 * {
 
@@ -25,7 +37,7 @@ input:focus {
 .top-landing {
   min-height: 100vh;
   width: 100%;
-  background-image: url('./images/bg_3.png');
+  background-image: url('./images/index-bg.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -40,6 +52,9 @@ input:focus {
   text-transform: uppercase;
   padding: 40px 20px 40px 40px;
   font-family: 'Open Sans', sans-serif;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .left-top h2 {
@@ -54,6 +69,8 @@ input:focus {
   letter-spacing: 0px;
   width: 100%;
   font-family: 'FuturaLight', cursive;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .left-top form {
@@ -161,7 +178,7 @@ input:focus {
   background-color: transparent;
 }
 
-.left-top form a {
+.left-top form button {
   width: 100%;
   background-color: #B8A871;
   color: #000;
@@ -175,6 +192,14 @@ input:focus {
   text-decoration: none;
   display: flex;
   justify-content: center;
+}
+
+.left-top form p#error {
+  color: #D00025;
+  text-transform: none;
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-family: 'FuturaLight', cursive;
 }
 
 .right-top {
@@ -394,13 +419,14 @@ footer .bottom-row span {
 
 .top-landing.gracias {
   min-height: 85vh;
+  background-image: url('./images/bg_3.png');
 }
 
 .top-landing.gracias .right-top {
   padding: 40px 60px 50px 40px;
-  width: 65%;
+  width: 75%;
   margin: 0 auto;
-  margin-left: 25%;
+  margin-left: 30%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -424,6 +450,147 @@ footer.gracias {
   display: none;
 }
 
+/* AGE GATE */
+
+.age-gate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px 20%;
+  background-image: url('./images/age-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  position: relative;
+  font-family: 'FuturaLight', cursive;
+}
+
+.age-gate .logo-wrap img {
+  width: 230px;
+  margin-bottom: 30px;
+}
+
+.age-gate .form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.age-gate .form-wrapper h4 {
+ font-size: 16px;
+ font-family: 'FuturaLight', cursive;
+ font-weight: 300;
+ color: #fff;
+ text-align: center;
+ margin-bottom: 50px;
+}
+
+.age-gate .form-wrapper div.check {
+  display: flex;
+  align-items: flex-start;
+  width: 60%;
+  margin-left: 15px;
+  flex-wrap: wrap;
+}
+
+.age-gate .form-wrapper div.check input {
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+.age-gate .form-wrapper div.check p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.age-gate .form-wrapper div.check p span {
+  font-size: 10px;
+  margin-left: 0;
+} 
+
+.age-gate .form-wrapper form {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+.age-gate .form-wrapper form div {
+  display: flex;
+  padding: 5px;
+  min-height: 50px;
+  align-items: center;
+  border: 3px solid #D00025;
+  margin: 0 15px;
+  box-sizing: border-box;
+  width: 15%;
+  justify-content: space-between;
+}
+
+.age-gate .form-wrapper form div.long {
+  width: 25%;
+}
+
+.age-gate .form-wrapper form div input {
+  font-size: 30px;
+  text-align: center;
+  height: 50px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border: 0;
+  outline: none;
+  width: 50%;
+  color: #000;
+  margin: 0 3px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.age-gate .form-wrapper form div input.short {
+  width: 25%;
+  margin: 0 3px;
+  box-sizing: border-box;
+}
+
+.age-gate .form-wrapper p {
+  color: #fff;
+  font-weight: 300;
+  margin: 0;
+}
+
+.age-gate span.last {
+  font-size: 10px;
+  color: #fff;
+  font-weight: 300;
+  width: 80%;
+} 
+
+.age-gate button.button {
+  background-color: #D00025;
+  color: #fff;
+  font-family: BudBold;
+  padding: 10px 40px;
+  margin-top: 30px;
+  border: 0;
+}
+
+.age-gate a.button:hover {
+  text-decoration: none;
+}
+
+footer.age {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+footer.age .mid-row a {
+  color: #fff;
+}
 
 
 /* MOBILE */
@@ -523,5 +690,30 @@ footer.gracias {
   }
   footer .bottom-row span {
     display: none
+  }
+
+  .age-gate {
+    padding: 40px 20px;
+    min-height: unset;
+    background-image: url('./images/age-bg-m.png');
+  }
+
+  .age-gate .form-wrapper form div {
+    width: 27%;
+    margin: 0 5px;
+    padding: 5px 2px;
+  }
+  .age-gate .form-wrapper form div.long {
+    width: 46%;
+  }
+  .age-gate .form-wrapper div.check {
+    width: 100%;
+  }
+  footer.age {
+    position: relative;
+    padding-top: 20px;
+  }
+  footer.age .mid-row a {
+    color: #D00025;
   }
 }
